@@ -1,3 +1,5 @@
+import { assetUrl } from "./assetUrl.ts";
+
 export type ViewName = "map" | "devices" | "geofences" | "alerts";
 
 export const VIEW_TITLES: Record<ViewName, string> = {
@@ -8,10 +10,10 @@ export const VIEW_TITLES: Record<ViewName, string> = {
 };
 
 export const NAV_ITEMS: { id: ViewName; label: string; icon: string }[] = [
-  { id: "map", label: "Map", icon: "/assets/icon-map.svg" },
-  { id: "devices", label: "Devices", icon: "/assets/icon-devices.svg" },
-  { id: "geofences", label: "Geofences", icon: "/assets/icon-geofences.svg" },
-  { id: "alerts", label: "Alerts", icon: "/assets/icon-alerts.svg" },
+  { id: "map", label: "Map", icon: assetUrl("assets/icon-map.svg") },
+  { id: "devices", label: "Devices", icon: assetUrl("assets/icon-devices.svg") },
+  { id: "geofences", label: "Geofences", icon: assetUrl("assets/icon-geofences.svg") },
+  { id: "alerts", label: "Alerts", icon: assetUrl("assets/icon-alerts.svg") },
 ];
 
 export const USER_CARD = {
