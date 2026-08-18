@@ -16,7 +16,7 @@ export default function App() {
         navExpanded={navExpanded}
         onNavExpandedChange={setNavExpanded}
       />
-      <div className="shell">
+      <div className={navExpanded ? "shell is-nav-expanded" : "shell"}>
         <AppSidenav
           expanded={navExpanded}
           activeView={activeView}

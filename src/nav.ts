@@ -2,6 +2,9 @@ import { assetUrl } from "./assetUrl.ts";
 
 export type ViewName = "map" | "devices" | "geofences" | "alerts";
 
+export const SIDE_NAV_MAX_WIDTH = "280px";
+export const SIDE_NAV_MIN_WIDTH = "4rem";
+
 export const VIEW_TITLES: Record<ViewName, string> = {
   map: "Map",
   devices: "Devices",
@@ -17,9 +20,9 @@ export const NAV_ITEMS: { id: ViewName; label: string; icon: string }[] = [
 ];
 
 export const USER_CARD = {
-  avatarAlt: "VS",
-  email: "vs@trimble.com",
-  name: "Victor Smith",
+  initials: "RT",
+  email: "Rakeshwar_t@trimble.com",
+  name: "Rakeshwar Thanagopal",
 };
 
 export const NAVBAR_VISIBILITY = {
@@ -31,5 +34,5 @@ export const NAVBAR_VISIBILITY = {
   notifications: false,
   search: true,
   searchInput: false,
-  user: true,
+  user: false,
 };

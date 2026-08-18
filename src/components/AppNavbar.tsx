@@ -1,11 +1,11 @@
 import { useEffect, useRef } from "react";
 import {
   ModusWcNavbar,
-  type INavbarUserCard,
   type INavbarVisibility,
 } from "@trimble-oss/moduswebcomponents-react";
 import { assetUrl } from "../assetUrl.ts";
-import { NAVBAR_VISIBILITY, USER_CARD } from "../nav.ts";
+import { NAVBAR_VISIBILITY } from "../nav.ts";
+import { UserMenu } from "./UserMenu.tsx";
 
 type AppNavbarProps = {
   navExpanded: boolean;
@@ -32,7 +32,6 @@ export function AppNavbar({
     <ModusWcNavbar
       ref={navbarRef}
       mainMenuOpen={false}
-      userCard={USER_CARD as INavbarUserCard}
       visibility={NAVBAR_VISIBILITY as INavbarVisibility}
       onMainMenuOpenChange={() => onNavExpandedChange(!navExpanded)}
     >
@@ -49,6 +48,9 @@ export function AppNavbar({
             <span className="product-title__light">Management</span>
           </p>
         </div>
+      </div>
+      <div slot="end" className="navbar-end">
+        <UserMenu />
       </div>
     </ModusWcNavbar>
   );
