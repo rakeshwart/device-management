@@ -1,0 +1,22 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", "Segoe UI", sans-serif;
+  color: #171c1e;
+  background: #ffffff;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
