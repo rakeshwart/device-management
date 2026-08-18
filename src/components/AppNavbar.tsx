@@ -4,6 +4,7 @@ import {
   type INavbarUserCard,
   type INavbarVisibility,
 } from "@trimble-oss/moduswebcomponents-react";
+import { assetUrl } from "../assetUrl.ts";
 import { NAVBAR_VISIBILITY, USER_CARD } from "../nav.ts";
 
 type AppNavbarProps = {
@@ -37,11 +38,11 @@ export function AppNavbar({
     >
       <div slot="start" className="brand">
         <span className="icon-frame brand__emblem">
-          <img src="/assets/emblem.svg" alt="" width={32} height={32} />
+          <img src={assetUrl("assets/emblem.svg")} alt="" width={32} height={32} />
         </span>
         <div className="brand__name">
           <span className="icon-frame brand__wordmark">
-            <img src="/assets/wordmark.svg" alt="Trimble" width={37} height={8} />
+            <img src={assetUrl("assets/wordmark.svg")} alt="Trimble" width={37} height={8} />
           </span>
           <p className="product-title">
             <span className="product-title__strong">Device</span>
