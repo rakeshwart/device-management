@@ -3,7 +3,8 @@ import {
   ModusWcButton,
   ModusWcTable,
 } from "@trimble-oss/moduswebcomponents-react";
-import type { ITableColumn } from "@trimble-oss/moduswebcomponents/components/modus-wc-table/modus-wc-table";
+import type { ITableColumn } from "@trimble-oss/moduswebcomponents";
+import { assetUrl } from "../assetUrl.ts";
 import { AssetIcon } from "./AssetIcon.tsx";
 
 type GroupId = "all" | "group-2" | "group-3" | "group-4" | "group-5";
@@ -38,7 +39,7 @@ function renderTypeIcon(): HTMLElement {
   const wrap = document.createElement("span");
   wrap.className = "devices-type-icon";
   const img = document.createElement("img");
-  img.src = "/assets/icon-device-type.png";
+  img.src = assetUrl("assets/icon-device-type.png");
   img.alt = "";
   img.width = 24;
   img.height = 24;
@@ -83,7 +84,7 @@ export function DevicesPage() {
             variant="outlined"
             aria-label="Search devices"
           >
-            <AssetIcon src="/assets/icon-devices-search.svg" size={16} />
+            <AssetIcon src={assetUrl("assets/icon-devices-search.svg")} size={16} />
           </ModusWcButton>
           <ModusWcButton
             color="tertiary"
@@ -92,7 +93,7 @@ export function DevicesPage() {
             variant="outlined"
             aria-label="Filter devices"
           >
-            <AssetIcon src="/assets/icon-devices-filter.svg" size={16} />
+            <AssetIcon src={assetUrl("assets/icon-devices-filter.svg")} size={16} />
           </ModusWcButton>
           <ModusWcButton color="primary" size="md" variant="filled">
             Add
@@ -113,7 +114,7 @@ export function DevicesPage() {
             onClick={() => setSelectedGroup("all")}
           >
             <span className="devices-group-icon">
-              <img src="/assets/icon-device-group.svg" alt="" width={21} height={22} />
+              <img src={assetUrl("assets/icon-device-group.svg")} alt="" width={21} height={22} />
             </span>
             <span className="devices-group-copy">
               <span className="devices-group-name">All Devices</span>
@@ -129,7 +130,7 @@ export function DevicesPage() {
               onClick={() => setSelectedGroup(group.id)}
             >
               <span className="devices-group-icon">
-                <img src="/assets/icon-device-group.svg" alt="" width={21} height={22} />
+                <img src={assetUrl("assets/icon-device-group.svg")} alt="" width={21} height={22} />
               </span>
               <span className="devices-group-copy">
                 <span className="devices-group-name">{group.name}</span>

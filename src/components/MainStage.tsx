@@ -1,4 +1,5 @@
 import { ModusWcButton, ModusWcPanel } from "@trimble-oss/moduswebcomponents-react";
+import { assetUrl } from "../assetUrl.ts";
 import { VIEW_TITLES, type ViewName } from "../nav.ts";
 import { AssetIcon } from "./AssetIcon.tsx";
 import { DeviceMap } from "./DeviceMap.tsx";
@@ -30,7 +31,7 @@ export function MainStage({
               variant="outlined"
               onButtonClick={onTogglePanel}
             >
-              <AssetIcon src="/assets/icon-collapse.svg" size={16} />
+              <AssetIcon src={assetUrl("assets/icon-collapse.svg")} size={16} />
             </ModusWcButton>
             {panelOpen ? (
               <ModusWcPanel className="details-panel" height="100%" width="320px">
